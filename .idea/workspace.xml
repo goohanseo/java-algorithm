@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b4574906-b368-411b-95e4-69b8de568ff2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/algorithm.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Address.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BinarySearchTree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Node.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Prob10.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/address_book2020.tsv" afterDir="false" />
+    <list default="true" id="b4574906-b368-411b-95e4-69b8de568ff2" name="Changes" comment="6주차">
+      <change afterPath="$PROJECT_DIR$/3weeks/input(4번).txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/3weeks/knapsack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/3weeks/maze.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/3weeks/nqueens.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/input.txt (2주차 미로)" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Address.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BinarySearchTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Prob10.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Prob10.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,13 +56,21 @@
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/3weeks" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Prob10">
+  <component name="RunManager" selected="Application.knapsack">
     <configuration name="Assignment0305" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Assignment0305" />
+      <module name="algorithm" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="algorithm" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -84,8 +90,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="knapsack" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="knapsack" />
+      <module name="algorithm" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.knapsack" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Prob10" />
         <item itemvalue="Application.Assignment0305" />
         <item itemvalue="Application.WebLogProcessor" />
@@ -103,8 +118,19 @@
       <workItem from="1680678722521" duration="1285000" />
       <workItem from="1681434453402" duration="398000" />
       <workItem from="1681475987293" duration="9819000" />
-      <workItem from="1681542238614" duration="16826000" />
+      <workItem from="1681542238614" duration="17718000" />
+      <workItem from="1681712510903" duration="1685000" />
+      <workItem from="1681718798043" duration="1459000" />
+      <workItem from="1681725821271" duration="6143000" />
     </task>
+    <task id="LOCAL-00001" summary="6주차">
+      <created>1681629950852</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1681629950852</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -120,5 +146,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="6주차" />
+    <option name="LAST_COMMIT_MESSAGE" value="6주차" />
   </component>
 </project>
