@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b4574906-b368-411b-95e4-69b8de568ff2" name="Changes" comment="commit">
-      <change afterPath="$PROJECT_DIR$/4weeks/LogFileAnalyzer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/5weeks/buildMaxHeap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/5weeks/힙 정렬" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/7weeks/레드블랙트리.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/7weeks/이진트리파일저장복구.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/정리/트리/BinarySearchTree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/정리/트리/BinaryTree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/정리/트리/BinaryTree_levelorder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/정리/트리/RedBlackTree.java" afterDir="false" />
+    <list default="true" id="b4574906-b368-411b-95e4-69b8de568ff2" name="Changes" comment="6주차">
+      <change afterPath="$PROJECT_DIR$/3weeks/input(4번).txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/3weeks/knapsack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/3weeks/maze.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/3weeks/nqueens.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/input.txt (2주차 미로)" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Address.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BinarySearchTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Prob10.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Prob10.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +28,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -38,40 +38,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/guhanseo/study/algorithm/정리/트리",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "SDKs",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/guhanseo/study/algorithm&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/정리/트리" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/3weeks" />
+      <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.이진트리중순위">
-    <configuration name="이진트리중순위" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="이진트리중순위" />
-      <module name="algorithm" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.knapsack">
     <configuration name="Assignment0305" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Assignment0305" />
       <module name="algorithm" />
@@ -93,6 +83,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="WebLogProcessor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="WebLogProcessor" />
+      <module name="algorithm" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="knapsack" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="knapsack" />
       <module name="algorithm" />
@@ -102,11 +99,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.이진트리중순위" />
         <item itemvalue="Application.knapsack" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Prob10" />
         <item itemvalue="Application.Assignment0305" />
+        <item itemvalue="Application.WebLogProcessor" />
       </list>
     </recent_temporary>
   </component>
@@ -125,8 +122,6 @@
       <workItem from="1681712510903" duration="1685000" />
       <workItem from="1681718798043" duration="1459000" />
       <workItem from="1681725821271" duration="6143000" />
-      <workItem from="1681866745683" duration="1365000" />
-      <workItem from="1682446347008" duration="9472000" />
     </task>
     <task id="LOCAL-00001" summary="6주차">
       <created>1681629950852</created>
@@ -135,14 +130,7 @@
       <option name="project" value="LOCAL" />
       <updated>1681629950852</updated>
     </task>
-    <task id="LOCAL-00002" summary="commit">
-      <created>1681866901661</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1681866901661</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,7 +149,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="6주차" />
-    <MESSAGE value="commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="6주차" />
   </component>
 </project>
