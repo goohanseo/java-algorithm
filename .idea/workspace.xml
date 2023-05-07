@@ -2,17 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b4574906-b368-411b-95e4-69b8de568ff2" name="Changes" comment="6주차">
-      <change afterPath="$PROJECT_DIR$/3weeks/input(4번).txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/3weeks/knapsack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/3weeks/maze.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/3weeks/nqueens.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/input.txt (2주차 미로)" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/week8/CustomHashFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/week8/Prob01.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Address.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BinarySearchTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Node.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Prob10.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Prob10.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_02_Pytorch_Quickstart (1).ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_03_Tensor.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_04_Dataset_and_Dataloader.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_05_Test_transform.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_05_Transforms (1).ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_06_Build_Model.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_06_Build_Model.ipynb의 사본" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_07_Autograd.ipynb의 사본" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_08_Optimization.ipynb의 사본" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/02_02_cifar10_tutorial.ipynb의 사본" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/02_03_resenet.ipynb의 사본" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/02_04 transfer_learning_tutorial.ipynb의 사본" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment01 (3).ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment01 (4).ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Untitled0.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/week3/prob05_maze.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/week3/prob05_maze.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +39,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectId" id="2NztQ542POTXq6BfGdhNT72P7SK" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -56,19 +67,13 @@
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/3weeks" />
+      <recent name="$PROJECT_DIR$/src/week8" />
       <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/3weeks" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.knapsack">
-    <configuration name="Assignment0305" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Assignment0305" />
-      <module name="algorithm" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.week8.Prob01">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="algorithm" />
@@ -83,13 +88,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WebLogProcessor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="WebLogProcessor" />
-      <module name="algorithm" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="knapsack" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="knapsack" />
       <module name="algorithm" />
@@ -97,13 +95,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="week8.CustomHashFunction" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="week8.CustomHashFunction" />
+      <module name="algorithm" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="week8.Prob01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="week8.Prob01" />
+      <module name="algorithm" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.week8.Prob01" />
+        <item itemvalue="Application.week8.CustomHashFunction" />
         <item itemvalue="Application.knapsack" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Prob10" />
-        <item itemvalue="Application.Assignment0305" />
-        <item itemvalue="Application.WebLogProcessor" />
       </list>
     </recent_temporary>
   </component>
@@ -122,6 +134,8 @@
       <workItem from="1681712510903" duration="1685000" />
       <workItem from="1681718798043" duration="1459000" />
       <workItem from="1681725821271" duration="6143000" />
+      <workItem from="1682464671565" duration="614000" />
+      <workItem from="1683362693904" duration="5612000" />
     </task>
     <task id="LOCAL-00001" summary="6주차">
       <created>1681629950852</created>
