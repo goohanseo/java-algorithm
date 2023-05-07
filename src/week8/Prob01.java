@@ -12,7 +12,7 @@ class text {
         preprefix = pre;
         postprefix = post;
     }
-
+//ㅠ허ㅏ
     @Override
     public boolean equals(Object obj) {
         if (obj == this) {
