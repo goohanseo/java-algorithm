@@ -1,26 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b4574906-b368-411b-95e4-69b8de568ff2" name="Changes" comment="6주차">
-      <change afterPath="$PROJECT_DIR$/src/week8/CustomHashFunction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/week8/Prob01.java" afterDir="false" />
+    <list default="true" id="b4574906-b368-411b-95e4-69b8de568ff2" name="Changes" comment="8주차 해슁 과제">
+      <change afterPath="$PROJECT_DIR$/src/week9/DFS_NODIRECTED.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/week9/Dictionary.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01_02_Pytorch_Quickstart (1).ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/01_03_Tensor.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/01_04_Dataset_and_Dataloader.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/01_05_Test_transform.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/01_05_Transforms (1).ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/01_06_Build_Model.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/01_06_Build_Model.ipynb의 사본" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/01_07_Autograd.ipynb의 사본" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/01_08_Optimization.ipynb의 사본" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/02_02_cifar10_tutorial.ipynb의 사본" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/02_03_resenet.ipynb의 사본" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/02_04 transfer_learning_tutorial.ipynb의 사본" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment01 (3).ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment01 (4).ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Untitled0.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/week3/prob05_maze.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/week3/prob05_maze.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +39,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/guhanseo/study/algorithm&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/guhanseo/study/java-algorithm&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
@@ -64,6 +48,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="week9" />
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -135,7 +120,9 @@
       <workItem from="1681718798043" duration="1459000" />
       <workItem from="1681725821271" duration="6143000" />
       <workItem from="1682464671565" duration="614000" />
-      <workItem from="1683362693904" duration="5612000" />
+      <workItem from="1683362693904" duration="11398000" />
+      <workItem from="1683450911625" duration="770000" />
+      <workItem from="1683889356944" duration="5232000" />
     </task>
     <task id="LOCAL-00001" summary="6주차">
       <created>1681629950852</created>
@@ -144,7 +131,28 @@
       <option name="project" value="LOCAL" />
       <updated>1681629950852</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="8wnck">
+      <created>1683422956157</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1683422956157</updated>
+    </task>
+    <task id="LOCAL-00003" summary="8주차">
+      <created>1683443717828</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1683443717828</updated>
+    </task>
+    <task id="LOCAL-00004" summary="8주차 해슁 과제">
+      <created>1683451018886</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1683451018886</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,6 +171,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="6주차" />
-    <option name="LAST_COMMIT_MESSAGE" value="6주차" />
+    <MESSAGE value="8wnck" />
+    <MESSAGE value="8주차" />
+    <MESSAGE value="8주차 해슁 과제" />
+    <option name="LAST_COMMIT_MESSAGE" value="8주차 해슁 과제" />
   </component>
 </project>
