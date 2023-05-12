@@ -3,33 +3,34 @@ package week9;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.nio.file.Path;
 import java.util.*;
 
 public class Dictionary {
-    private Map<String, List<String>> graph;
+    public Map<String, List<String>> graph;
 
-    public Dictionary(){
+    public Dictionary() {
         graph = new HashMap<>();
     }
 
-    public void readFile(String filename){
-        try (BufferedReader reader = new BufferedReader(new FileReader(filename))){
-        String line;
-        while ((line = reader.readLine()) != null){
-            String[] parts = line.split("\t");
-            if(parts.length != 2){
-                continue;
-            }
+    public void readFile(String filename) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(filename))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                String[] parts = line.split("\t");
+                if (parts.length != 2) {
+                    continue;
+                }
 
-            String word = parts[0];
-            String description = parts[1];
-            List<String> descriptionword = tokenizeDescription(description);
-            graph.put(word, descriptionword);
-        }
-    } catch (IOException e){
+                String word = parts[0];
+                String description = parts[1];
+                List<String> descriptionword = tokenizeDescription(description);
+                graph.put(word, descriptionword);
+            }
+        } catch (IOException e) {
             e.printStackTrace();
         }
-}
+    }
 
     private List<String> tokenizeDescription(String description) {
         //입력 설명을 단어 배열로 분할 정규식 \\s+는 하나 이상의 공백 문자와 일치하도록 모든 공백 문자에서 설명이 분할
@@ -37,28 +38,55 @@ public class Dictionary {
         // 빈 arraylist 초기화
         List<String> descriptionword = new ArrayList<>();
         //for-each 루프 사용하여 words 배열의 단어 반복
-        for (String word : words){
+        for (String word : words) {
             descriptionword.add(word);
         }
         return descriptionword;
     }
 
-    public Map<String, List<String>> getWordDescriptions(){
+    public Map<String, List<String>> getWordDescriptions() {
         return graph;
     }
 
     public static void main(String[] args) {
-        Dictionary dictionary = new Dictionary();
-        dictionary.readFile("dict_simplified.txt");
-        System.out.println(dictionary.getWordDescriptions());
+        Dictionary graph = new Dictionary();
+        graph.readFile("/Users/guhanseo/study/java-algorithm/src/week9/dict_simplified.txt");
+        graph.buildGraph();
+        System.out.println("Vertices: " + graph.vertexCount());
+        System.out.println("Edges: " + graph.edgeCount());
+
+        // Find the vertex with the maximum degree and output the word and degree corresponding to the vertex
+        Pair maxDegreeVertex = graph.findMaxDegreeVertex();
+        System.out.println("Max degree vertex: " + maxDegreeVertex.getWord() + " with degree " + maxDegreeVertex.getDegree());
+
+        // Find the largest connected component and print the size (number of vertices) of that connected component
+        System.out.println("Size of the largest connected component: " + graph.largestConnectedComponentSize());
+
+        // Input a word and an integer representing the search depth
+        String startWord = "word1";
+        int distance = 2;
+
+        // Find all words that are less than or equal to the distance from the word in the graph and output them one by one per line
+        List<String> wordsWithinDistance = graph.wordsWithinDistance(startWord, distance);
+        System.out.println("Words within distance " + distance + " from " + startWord + ":");
+        for (String word : wordsWithinDistance) {
+            System.out.println(word);
+        }
+
+        // Print the count of the last printed word
+        System.out.println("Count of the last printed word: " + wordsWithinDistance.size());
     }
 
     public void buildGraph() {
-        //graph의 각 항복에 대해 반복 entry는 사전 항목 하나 나타냄 단어와 설명을 가져옴
-        for (Map.Entry<String, List<String>> entry : graph.entrySet()) {
+        // Create a copy of the graph for iteration
+        Map<String, List<String>> graphCopy = new HashMap<>(graph);
+
+        // Iterate over each entry in the graph copy
+        for (Map.Entry<String, List<String>> entry : graphCopy.entrySet()) {
             String word = entry.getKey();
             List<String> description = entry.getValue();
-            //description의 각 단어가 graph의 단어와 일치하는지 확인후 일치하면 엣지를 추가
+
+            // Check if each description word matches a word in the graph, then add an edge
             for (String descriptionWord : description) {
                 if (graph.containsKey(descriptionWord)) {
                     addEdge(word, descriptionWord);
@@ -68,9 +96,8 @@ public class Dictionary {
     }
     public void addEdge(String word1, String word2) {
         // Get the current edges for word1 and word2
-        Set<String> edges1 = graph.getOrDefault(word1, new HashSet<>());
-        Set<String> edges2 = graph.getOrDefault(word2, new HashSet<>());
-
+        List<String> edges1 = graph.getOrDefault(word1, new ArrayList<>());
+        List<String> edges2 = graph.getOrDefault(word2, new ArrayList<>());
         // Add the other word to the list of edges
         edges1.add(word2);
         edges2.add(word1);
@@ -110,7 +137,7 @@ public class Dictionary {
             }
         }
 
-        // Return the word with the maximum degree and its degree as a WordDegree object
+        // Return the word with the maximum degree and its degree as a Pair object
         return new Pair(maxDegreeWord, maxDegree);
     }
 
@@ -150,22 +177,35 @@ public class Dictionary {
         return componentSize;
     }
 
+    public List<String> wordsWithinDistance(String startWord, int distance) {
+        Set<String> visited = new HashSet<>();
+        Queue<Pair> queue = new LinkedList<>();
+        List<String> result = new ArrayList<>();
 
-    public class Pair {
-        private String word;
-        private int Integer;
+        queue.add(new Pair(startWord, 0));
+        visited.add(startWord);
 
-        public Pair(String word, int degree) {
-            this.word = word;
-            this.Integer = degree;
+        while (!queue.isEmpty()) {
+            Pair currentPair = queue.poll();
+            String currentWord = currentPair.getWord();
+            int currentDistance = currentPair.getDegree();
+
+            if (currentDistance <= distance) {
+                result.add(currentWord);
+            }
+
+            if (currentDistance < distance) {
+                for (String neighbor : graph.get(currentWord)) {
+                    if (!visited.contains(neighbor)) {
+                        queue.add(new Pair(neighbor, currentDistance + 1));
+                        visited.add(neighbor);
+                    }
+                }
+            }
         }
 
-        public String getWord() {
-            return word;
-        }
-
-        public int getDegree() {
-            return Integer;
-        }
+        return result;
     }
 }
+
+

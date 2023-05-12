@@ -15,6 +15,7 @@ class MarkovChainText {
         buildMap(text);
     }
 
+
     private void buildMap(String text) {
         String[] words = text.split("\\s+"); //공백을 기준으로 나눔
         for (int i = 0; i < words.length - 2; i++){ //배열의 단어를 순회하며 각 접두사-접미사 조합 찾는다
@@ -22,7 +23,7 @@ class MarkovChainText {
             String prefix = words[i] + " " + words[i + 1]; //현재 단어와 그 다음 단어로 접두사 만듬
             String suffix = words[i + 2]; //그 다음 단어의 다음 단어를 접미사로 설정
             //해당 접두사에 대한 접미사 목록을 가져옴, 해당 접두사 없으면 새로운 arraylist 생성
-            List<String> suffixes = prefixToSuffixes.getOrDefault(prefix, new ArrayList<>());
+            List<String> suffixes = new ArrayList<>(prefixToSuffixes.getOrDefault(prefix, new ArrayList<>()));
             //해당 접시마를 접미사 목록에 추가
             suffixes.add(suffix);
             //접두사-접미사 목록을 다시 맵에 저장, 새로운 접미사를 추가한 목록을 업데이트 하기 위함
