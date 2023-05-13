@@ -3,12 +3,13 @@ package week9;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.nio.file.Path;
 import java.util.*;
 
 public class Dictionary {
+    //인접리스트 정의
     public Map<String, List<String>> graph;
 
+    //HashMap은 Map 인터페이스를 구형하고 키-값 쌍을 저장하는 방법
     public Dictionary() {
         graph = new HashMap<>();
     }
@@ -16,7 +17,9 @@ public class Dictionary {
     public void readFile(String filename) {
         try (BufferedReader reader = new BufferedReader(new FileReader(filename))) {
             String line;
+            //더이상 줄이 없어 null을 반환할 때까지 파일을 읽음
             while ((line = reader.readLine()) != null) {
+                //탭 문자로 구분
                 String[] parts = line.split("\t");
                 if (parts.length != 2) {
                     continue;
@@ -24,6 +27,7 @@ public class Dictionary {
 
                 String word = parts[0];
                 String description = parts[1];
+                //토큰화처리하여 문자열 목록을 반환
                 List<String> descriptionword = tokenizeDescription(description);
                 graph.put(word, descriptionword);
             }
@@ -44,10 +48,6 @@ public class Dictionary {
         return descriptionword;
     }
 
-    public Map<String, List<String>> getWordDescriptions() {
-        return graph;
-    }
-
     public static void main(String[] args) {
         Dictionary graph = new Dictionary();
         graph.readFile("/Users/guhanseo/study/java-algorithm/src/week9/dict_simplified.txt");
@@ -63,7 +63,7 @@ public class Dictionary {
         System.out.println("Size of the largest connected component: " + graph.largestConnectedComponentSize());
 
         // Input a word and an integer representing the search depth
-        String startWord = "word1";
+        String startWord = "mountain";
         int distance = 2;
 
         // Find all words that are less than or equal to the distance from the word in the graph and output them one by one per line
@@ -78,43 +78,56 @@ public class Dictionary {
     }
 
     public void buildGraph() {
-        // Create a copy of the graph for iteration
+        //새 HashMap을 만들고 원본 graph 맵의 복사한다.
+        //반복중 수정된 내용이 원래 지도에 영향을 주지 않기 위해
         Map<String, List<String>> graphCopy = new HashMap<>(graph);
+        //그래프 맵에 추가해야 하는 새 엣지를 임시로 저장하는데 사용
+        Map<String, List<String>> tempEdges = new HashMap<>();
 
-        // Iterate over each entry in the graph copy
+        //for-each 루프 사용하여 graphCopy 반복
         for (Map.Entry<String, List<String>> entry : graphCopy.entrySet()) {
             String word = entry.getKey();
             List<String> description = entry.getValue();
 
-            // Check if each description word matches a word in the graph, then add an edge
+            //현재 항목에 대한 설명의 각 단어 반복
             for (String descriptionWord : description) {
+                //desciptionWord가 원본 graph에 존재하는지 확인
                 if (graph.containsKey(descriptionWord)) {
-                    addEdge(word, descriptionWord);
+                    //일치하는 경우 새 엣지 추가
+                    //존재하지 않으면  해당 키의 값으로 새 Arraylist만들고 해당 단어를 목록에 추가
+                    //양방향 연결을 보장하기 위해 서로의 엣지에 추가
+                    tempEdges.computeIfAbsent(word, k -> new ArrayList<>()).add(descriptionWord);
+                    tempEdges.computeIfAbsent(descriptionWord, k -> new ArrayList<>()).add(word);
                 }
             }
         }
-    }
-    public void addEdge(String word1, String word2) {
-        // Get the current edges for word1 and word2
-        List<String> edges1 = graph.getOrDefault(word1, new ArrayList<>());
-        List<String> edges2 = graph.getOrDefault(word2, new ArrayList<>());
-        // Add the other word to the list of edges
-        edges1.add(word2);
-        edges2.add(word1);
 
-        // Update the graph with the new edges
-        graph.put(word1, edges1);
-        graph.put(word2, edges2);
+        //tempEdges 맵의 각 항목을 반복, 새 엣지에 매핑된 단어를 나타냄
+        for (Map.Entry<String, List<String>> entry : tempEdges.entrySet()) {
+            String word = entry.getKey();
+            List<String> newEdges = entry.getValue();
+
+            //원본 graph에서 word에 대한 현재 엣지 목록 검색
+            //word가 키로 존재하면 엣지 목록 검색, 그렇지 않으면 새 빈 ArrayList 기본값으로 반환
+            List<String> edges = graph.getOrDefault(word, new ArrayList<>());
+
+            // Add the new edges to the current edges
+            edges.addAll(newEdges);
+
+            // Update the graph with the new edges
+            graph.put(word, edges);
+        }
     }
+
 
     public int vertexCount() {
-        // Return the number of vertices in the graph
+        //graph의 사이즈가 전체 정점의 갯수
         return graph.size();
     }
 
     public int edgeCount(){
         int totalEdges = 0;
-
+        //각 정점들의 엣지의 총합/2
         for (List<String> edges : graph.values()){
             totalEdges += edges.size();
         }
@@ -122,22 +135,24 @@ public class Dictionary {
     }
 
     public Pair findMaxDegreeVertex() {
+        //지금까지 만난 정점중 차수가 가장 높은 것을 찾음
         String maxDegreeWord = "";
         int maxDegree = 0;
 
-        // Iterate over each key (word) in the graph
+        //for-each 루프 사용하여 graph 맵의 각 키-값 쌍을 반복
         for (Map.Entry<String, List<String>> entry : graph.entrySet()) {
             String word = entry.getKey();
+            //연결된 엣지 목록의 크기를 가져온다
             int degree = entry.getValue().size();
 
-            // Check if the current word's degree is greater than the current max degree
+            //현재 최대 차수보다 높은지 대소비교
             if (degree > maxDegree) {
                 maxDegreeWord = word;
                 maxDegree = degree;
             }
         }
 
-        // Return the word with the maximum degree and its degree as a Pair object
+        //단어와 차수를 Pair 객체로 반환
         return new Pair(maxDegreeWord, maxDegree);
     }
 
@@ -145,9 +160,13 @@ public class Dictionary {
         Set<String> visited = new HashSet<>();
         int maxSize = 0;
 
+        //그래프의 각 키를 반복
         for (String word : graph.keySet()) {
+            //contains 메소드를 사용해 visited 세트에 존재하는지 확인
             if (!visited.contains(word)) {
+                //현재 단어와 visited를 인수로 설정하여 해당 단어를 포함하는 연결된 구성요소의 크기를 반환
                 int componentSize = bfs(word, visited);
+                //현재 maxsize와 componentsize를 비교
                 maxSize = Math.max(maxSize, componentSize);
             }
         }
@@ -156,6 +175,7 @@ public class Dictionary {
     }
 
     private int bfs(String start, Set<String> visited) {
+        //linkedlist로 큐를 초기화
         Queue<String> queue = new LinkedList<>();
         int componentSize = 0;
 
@@ -166,16 +186,20 @@ public class Dictionary {
             String current = queue.poll();
             componentSize++;
 
-            for (String neighbor : graph.get(current)) {
-                if (!visited.contains(neighbor)) {
-                    queue.add(neighbor);
-                    visited.add(neighbor);
+            List<String> neighbors = graph.get(current);
+            if (neighbors != null) {
+                for (String neighbor : neighbors) {
+                    if (!visited.contains(neighbor)) {
+                        queue.add(neighbor);
+                        visited.add(neighbor);
+                    }
                 }
             }
         }
 
         return componentSize;
     }
+
 
     public List<String> wordsWithinDistance(String startWord, int distance) {
         Set<String> visited = new HashSet<>();
@@ -195,10 +219,13 @@ public class Dictionary {
             }
 
             if (currentDistance < distance) {
-                for (String neighbor : graph.get(currentWord)) {
-                    if (!visited.contains(neighbor)) {
-                        queue.add(new Pair(neighbor, currentDistance + 1));
-                        visited.add(neighbor);
+                List<String> neighbors = graph.get(currentWord);
+                if (neighbors != null) {
+                    for (String neighbor : neighbors) {
+                        if (!visited.contains(neighbor)) {
+                            queue.add(new Pair(neighbor, currentDistance + 1));
+                            visited.add(neighbor);
+                        }
                     }
                 }
             }
@@ -206,6 +233,7 @@ public class Dictionary {
 
         return result;
     }
+
 }
 
 

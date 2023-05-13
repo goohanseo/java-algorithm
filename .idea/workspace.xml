@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b4574906-b368-411b-95e4-69b8de568ff2" name="Changes" comment="9주차">
-      <change afterPath="$PROJECT_DIR$/src/week9/Pair.java" afterDir="false" />
+    <list default="true" id="b4574906-b368-411b-95e4-69b8de568ff2" name="Changes" comment="9주차ing">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/week8/Prob01.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/week8/Prob01.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/week9/Dictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/week9/Dictionary.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -131,7 +129,9 @@
       <workItem from="1683450911625" duration="770000" />
       <workItem from="1683889356944" duration="5275000" />
       <workItem from="1683898620825" duration="1585000" />
-      <workItem from="1683900224030" duration="651000" />
+      <workItem from="1683900224030" duration="683000" />
+      <workItem from="1683938267618" duration="1567000" />
+      <workItem from="1683941517991" duration="5663000" />
     </task>
     <task id="LOCAL-00001" summary="6주차">
       <created>1681629950852</created>
@@ -168,7 +168,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683898455578</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="9주차ing">
+      <created>1683900894066</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1683900894066</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,6 +198,7 @@
     <MESSAGE value="8주차" />
     <MESSAGE value="8주차 해슁 과제" />
     <MESSAGE value="9주차" />
-    <option name="LAST_COMMIT_MESSAGE" value="9주차" />
+    <MESSAGE value="9주차ing" />
+    <option name="LAST_COMMIT_MESSAGE" value="9주차ing" />
   </component>
 </project>
